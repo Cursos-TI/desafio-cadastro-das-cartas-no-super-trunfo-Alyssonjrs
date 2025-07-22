@@ -1,10 +1,10 @@
 #include <stdio.h>
 int main() {
 
-     char estado;
+    char estado;
     char cidade[100];
     int populacao, pontos_turisticos;
-    float area, pib;
+    float area, pib, densidadepop, pib_per_capita;
 
     printf("Carta 1:\n");
 
@@ -32,6 +32,12 @@ int main() {
     scanf("%f", &pib);
     printf("PIB: %f\n", pib);
 
+    densidadepop = populacao / area;
+    printf("densidade poulacional: %f\n",densidadepop);
+
+    pib_per_capita = pib / populacao;
+    printf("PIB per capita: %f\n",pib_per_capita);
+
     printf("\nCarta 2:\n");
 
     printf("Escolha a inicial de uma letra de 'A' a 'H' de um estado que a represente: ");
@@ -57,6 +63,13 @@ int main() {
     printf("Digite o PIB desta cidade: ");
     scanf("%f", &pib);
     printf("PIB: %f\n", pib);
+
+    densidadepop = populacao / area;
+    printf("densidade poulacional: %f\n",densidadepop);
+
+    pib_per_capita = pib / populacao;
+    printf("PIB per capita: %f\n",pib_per_capita);
+
 
     return 0;
 }
