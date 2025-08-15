@@ -93,35 +93,13 @@ int main() {
 
     printf("\n*** Disputa ***\n");
 
-    printf("Comparação de Cartas:\n");
-    printf("População: Carta %d venceu (%d)\n",
-           (populacao1 > populacao2) ? 1 : 2,
-           (populacao1 > populacao2) ? 1 : 0);
-
-    printf("Área: Carta %d venceu (%d)\n",
-           (area1 > area2) ? 1 : 2,
-           (area1 > area2) ? 1 : 0);
-
-    printf("PIB: Carta %d venceu (%d)\n",
-           (pib_1 > pib_2) ? 1 : 2,
-           (pib_1 > pib_2) ? 1 : 0);
-
-    printf("Pontos Turísticos: Carta %d venceu (%d)\n",
-           (pontos_turisticos1 > pontos_turisticos2) ? 1 : 2,
-           (pontos_turisticos1 > pontos_turisticos2) ? 1 : 0);
-
-    printf("Densidade Populacional (menor é melhor): Carta %d venceu (%d)\n",
-           (densidadepop_1 < densidadepop_2) ? 1 : 2,
-           (densidadepop_1 < densidadepop_2) ? 1 : 0);
-
-    printf("PIB per Capita: Carta %d venceu (%d)\n",
-           (pib_per_capita1 > pib_per_capita2) ? 1 : 2,
-           (pib_per_capita1 > pib_per_capita2) ? 1 : 0);
-
-    printf("Super Poder: Carta %d venceu (%d)\n",
-           (super_poder_carta1 > super_poder_carta2) ? 1 : 2,
-           (super_poder_carta1 > super_poder_carta2) ? 1 : 0);
-
+       if (populacao1 > populacao2) {
+            printf("Carta 1 Venceu!");
+       }else {
+              printf("Carta 2 Venceu!");
+       }
+       
+    
     printf("*** Fim de jogo ***\n");
 
     return 0;
