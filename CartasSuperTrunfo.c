@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+
+
 int main() {
     // Variáveis Carta 1
     char estado1;
@@ -93,12 +95,74 @@ int main() {
 
     printf("\n*** Disputa ***\n");
 
-       if (populacao1 > populacao2) {
-            printf("Carta 1 Venceu!");
-       }else {
-              printf("Carta 2 Venceu!");
-       }
-       
+    int opcao;
+    printf("1 - População\n");
+    printf("2 - Área\n");
+    printf("3 - PIB\n");
+    printf("4 - Pontos turísticos\n");
+    printf("5 - Densidade demográfica (MENOR vence)\n");
+    printf("Escolha o atributo: ");
+    scanf("%d", &opcao);
+
+    switch (opcao) {
+        case 1: // População
+            printf("\nComparando População:\n");
+            if (populacao1 > populacao2) {
+                printf("Vencedor: %s\n", cidade1);
+            } else if (populacao2 > populacao1) {
+                printf("Vencedor: %s\n", cidade2);
+            } else {
+                printf("Empate!\n");
+            }
+            break;
+
+        case 2: // Área
+            printf("\nComparando Área:\n");
+            if (area1 > area2) {
+                printf("Vencedor: %s\n", cidade1);
+            } else if (area2 > area1) {
+                printf("Vencedor: %s\n", cidade2);
+            } else {
+                printf("Empate!\n");
+            }
+            break;
+
+        case 3: // PIB
+            printf("\nComparando PIB:\n");
+            if (pib_1 > pib_2) {
+                printf("Vencedor: %s\n", cidade1);
+            } else if (pib_2 > pib_1) {
+                printf("Vencedor: %s\n", cidade2);
+            } else {
+                printf("Empate!\n");
+            }
+            break;
+
+        case 4: // Pontos turísticos
+            printf("\nComparando Pontos turísticos:\n");
+            if (pontos_turisticos1 > pontos_turisticos2) {
+                printf("Vencedor: %s\n", cidade1);
+            } else if (pontos_turisticos2 > pontos_turisticos1) {
+                printf("Vencedor: %s\n", cidade2);
+            } else {
+                printf("Empate!\n");
+            }
+            break;
+
+        case 5: // Densidade (menor vence)
+            printf("\nComparando Densidade demográfica (menor vence):\n");
+            if (densidadepop_1 < densidadepop_2) {
+                printf("Vencedor: %s\n", cidade1);
+            } else if (densidadepop_2 < densidadepop_1) {
+                printf("Vencedor: %s\n", cidade2);
+            } else {
+                printf("Empate!\n");
+            }
+            break;
+
+        default:
+            printf("Opção inválida.\n");
+    }
     
     printf("*** Fim de jogo ***\n");
 
